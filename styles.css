@@ -62,17 +62,97 @@ h1, h2 {
 }
 
 /* Basic styling for project cards */
+.project-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.project-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
 .project-card {
+    flex: 0 0 300px;
+    margin: 0 10px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 10px;
+    margin: 0;
+    color: var(--neon-blue);
+}
+
+.project-details {
+    display: none;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.project-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.project-card.active .project-details {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tech-label {
+    background-color: var(--neon-purple);
+    color: var(--dark-bg);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+body.blur-background::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 5;
 }
 
 /* Add more styles as needed */
