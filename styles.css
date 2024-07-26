@@ -1,0 +1,78 @@
+:root {
+    --neon-blue: #00ffff;
+    --neon-purple: #bf00ff;
+    --neon-pink: #ff00ff;
+    --dark-bg: #121212;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+nav ul li a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--neon-pink);
+}
+
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    color: var(--neon-purple);
+    text-align: center;
+}
+
+/* Add more specific styles for each section as needed */
+
+/* Example of a glowing effect for headers */
+h1, h2 {
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple);
+}
+
+/* Basic styling for project cards */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Add more styles as needed */
