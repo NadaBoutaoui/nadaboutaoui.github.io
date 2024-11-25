@@ -3,87 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nada's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Nada Boutaoui - CV</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #8A4FFF;
+            --light-purple: #F4F0FF;
+            --dark: #1A1A1A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            color: var(--purple);
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--purple);
+        }
+
+        .section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: var(--purple);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--purple);
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-purple);
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .experience-item:hover, .project-item:hover, .education-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .experience-item h3, .project-item h3, .education-item h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item p, .project-item p, .education-item p {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .skill-category h3 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            background: var(--light-purple);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--purple);
+            color: white;
+        }
+
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .language-item {
+            background: var(--light-purple);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .thesis-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--purple);
+            text-decoration: none;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid var(--purple);
+            transition: all 0.3s ease;
+        }
+
+        .thesis-link:hover {
+            background: var(--purple);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#uiux">UI/UX Design</a></li>
-                <li><a href="#webdev">Web Development</a></li>
-                <li><a href="#mldata">ML & Data Science</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container header-content">
+            <h1>Nada Boutaoui</h1>
+            <p>AI & Data Science Engineer</p>
+            <div class="contact-info">
+                <a href="mailto:nadaboutaoui@gmail.com"><i class="fas fa-envelope"></i> nadaboutaoui@gmail.com</a>
+                <a href="tel:+213774783720"><i class="fas fa-phone"></i> (+213) 774783720</a>
+                <a href="https://nadaboutaoui.github.io/"><i class="fas fa-globe"></i> Portfolio</a>
+                <a href="https://nadaboutaoui.netlify.app/"><i class="fas fa-link"></i> Website</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="about">
-            <h1>About Me</h1>
-            <!-- Add your content here -->
-        </section>
-
-        <section id="uiux">
-            <h2>UI/UX Design Projects</h2>
-            <div class="project-carousel">
-                <div class="project-carousel-container">
-                    <div class="project-card">
-                        <img src="cake_website.jpg" alt="Project 1">
-                        <h3>Project 1</h3>
-                        <div class="project-details">
-                            <p>Description of Project 1.</p>
-                            <div class="project-technologies">
-                                <span class="tech-label">HTML</span>
-                                <span class="tech-label">CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="coffee shop.jpg" alt="Project 2">
-                        <h3>Project 2</h3>
-                        <div class="project-details">
-                            <p>Description of Project 2.</p>
-                            <div class="project-technologies">
-                                <span class="tech-label">JavaScript</span>
-                                <span class="tech-label">React</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add more project cards as needed -->
-                </div>
-                <button class="carousel-button prev">&lt;</button>
-                <button class="carousel-button next">&gt;</button>
+    <main class="container">
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master and Engineering Degree in Artificial Intelligence and Data Science</h3>
+                <p>Ecole Supérieure en Sciences et Technologies de l'Informatique et du Numérique (ESTIN)</p>
+                <p>2021 - 2024 | Algeria</p>
+                <p>EQF Level 7</p>
+                <a href="path-to-your-master-thesis.pdf" class="thesis-link" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Master Thesis: Energy Saving for Wireless Sensor Networks
+                </a>
+                <a href="path-to-your-engineering-thesis.pdf" class="thesis-link" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Engineering Thesis
+                </a>
+            </div>
+            
+            <div class="education-item">
+                <h3>Preparatory School</h3>
+                <p>Ecole nationale Supérieure d'Informatique (ESI)</p>
+                <p>2019 - 2021 | Algeria</p>
+                <p>EQF Level 5</p>
             </div>
         </section>
 
-        <section id="webdev">
-            <h2>Web Development Projects</h2>
-            <!-- Project cards will go here -->
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Research Intern - University à trois Rivières</h3>
+                <p>Feb 2024 - Sept 2024 | Quebec, Canada</p>
+                <p>Energy saving for Wireless Sensor Networks project:</p>
+                <ul>
+                    <li>Applied ML and DL models for energy conservation in WSNs and IoT networks</li>
+                    <li>Developed model architecture and implementation</li>
+                    <li>Conducted research and authored technical papers</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Software Developer Intern - Anabib</h3>
+                <p>July 2023 - Aug 2023 | Algeria</p>
+                <ul>
+                    <li>Developed desktop applications using Python and Tkinter</li>
+                    <li>Implemented ML models for automated audit processes</li>
+                    <li>Created automated reporting systems</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="mldata">
-            <h2>Machine Learning and Data Science Projects</h2>
-            <!-- Project cards will go here -->
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>naQa'a - NYUD QC Hackathon</h3>
+                <p>Quantum optimization tool for agricultural efficiency using Qiskit and qBraid</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>SCCA - Junction Finland Hackathon</h3>
+                <p>Web app for content creators using Flask, ReactJS, TensorFlow, and OpenCV</p>
+            </div>
+
+            <div class="project-item">
+                <h3>eFind Platform</h3>
+                <p>Full-stack web application for campus lost-and-found and peer-to-peer sales</p>
+            </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <!-- Add your degrees, courses, and certifications here -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">C/C++</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>ML & AI</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">Scikit-learn</span>
+                        <span class="skill-item">OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <!-- Add contact form or information here -->
+        <section class="section">
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="language-item">
+                    <h3>Arabic</h3>
+                    <p>Native</p>
+                </div>
+                <div class="language-item">
+                    <h3>English</h3>
+                    <p>C1/C2 - Proficient</p>
+                </div>
+                <div class="language-item">
+                    <h3>French</h3>
+                    <p>B2/C1 - Advanced</p>
+                </div>
+                <div class="language-item">
+                    <h3>Japanese</h3>
+                    <p>A2/B1 - Basic</p>
+                </div>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <!-- Add footer content here -->
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
